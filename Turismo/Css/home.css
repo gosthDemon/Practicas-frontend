@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap');
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #303030 #ffffff;
+}
+
+:root {
+    --clr: #222327;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(206, 83, 77, .5);
+    border-radius: 10px;
+}
+
+/* ===== End Scrollbar CSS ===== */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    justify-content: center;
+    min-height: 200vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    padding: 0px 6%;
+    z-index: 9999;
+}
+
+header .container-logo {
+    display: flex;
+    justify-content: right;
+    width: 300px;
+    height: 100%;
+}
+
+header .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+header .container-logo .logo img {
+    width: 60px;
+    transition: 0.8s;
+}
+
+.changeImage {
+        content: url('../img/logo/logo-villamontes.png');
+    transition: 0.8s;   
+}
+
+header .container-menu {
+    display: flex;
+    justify-content: right;
+    width: 70%;
+    height: 100%;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    float: right;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+header .container-icons {
+    display: flex;
+    justify-content: right;
+    height: 100%;
+}
+
+header ul li a.redes {
+    width: 39px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 0px 2px;
+}
+
+header ul li a.redes i {
+    color: white;
+    margin: auto auto;
+}
+
+#facebook-icon,
+#twitter-icon,
+#instagram-icon {
+    z-index: 2;
+    transition: .6s;
+}
+
+#instagram-icon i {
+    z-index: 2;
+}
+
+#facebook-icon:hover {
+    background: #3F5A9A;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: .6s;
+}
+
+#twitter-icon:hover {
+    background: #00ACEE;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: .6s;
+}
+
+#instagram-icon:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 2px;
+    height: 35px;
+    opacity: 0;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: .6s;
+}
+
+#instagram-icon:hover:after {
+    opacity: 1;
+    transition: .6s;
+}
+
+#facebook-icon:hover i,
+#twitter-icon:hover i {
+    color: white;
+    transition: .6s;
+}
+
+#instagram-icon:hover i {
+    color: white;
+    transition: .6s;
+    z-index: 2;
+}
+
+header.sticky {
+    background: white;
+    height: 70px;
+    padding: 0px 6%;
+}
+
+header.sticky .logo {
+    color: #424242;
+}
+
+header.sticky ul li a {
+    color: #424242;
+    transition: .6s;
+}
+
+header.sticky ul li a.redes {
+    border: 2px solid rgb(66, 66, 66, 0.3);
+    transition: .6s;
+}
+
+header.sticky ul li a.redes i {
+    color: #424242;
+    transition: .6s;
+}
+
+.banner {
+    position: relative;
+    background: url('../img/carousel/home_background-min.jpg');
+    height: 150vh;
+    width: 100%;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+    header.sticky {
+        background: red;
+    }
+}
+
+/* END HEADER-BANNER */
+
+/* Open Body */
+.body {
+    margin: auto auto;
+}
+
+/* General info */
+.general-info {
+    margin-top: 60px;
+    display: block;
+    width: 100%;
+    padding: 0px;
+    white-space: inherit;
+    text-align: center;
+}
+
+.image {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    max-height: 500px;
+    width: 50%;
+    min-width: 300px;
+    padding: 10px 11px 12px 10px;
+    max-width: 600px;
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    object-fit: cover;
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(206, 83, 77, .6);
+    transition: 2s;
+    opacity: 0;
+}
+
+.image:hover::before {
+    opacity: 1;
+    transition: .6s;
+    z-index: 7;
+}
+
+.image1 {
+    background-image: url("../img/general-info/girasoles.jpg");
+}
+
+.image2 {
+    background-image: url("../img/general-info/bosque.jpg");
+}
+
+.margin {
+    position: inherit;
+    display: flex;
+    height: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 10;
+    word-break: break-all;
+}
+
+.margin .tittle {
+    position: absolute;
+    color: white;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    font-size: 30px;
+    z-index: 10;
+    transition: .6s;
+    text-transform: uppercase;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.image:hover .margin .tittle {
+    bottom: 25px;
+    transition: .6s;
+}
+
+.image .margin .hidden {
+    position: absolute;
+    left: 7px;
+    bottom: -10px;
+    color: white;
+    opacity: 0;
+    transition: .6s;
+}
+
+.image:hover .margin .hidden {
+    opacity: 1;
+    transition: .6s;
+    z-index: 7;
+    bottom: 5px;
+    transition: .6;
+}
+
+
+/* END General Info */
+
+/* Grid-Blog */
+
+.gallery {
+    margin: 100px auto;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "left right";
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    padding: 10px 10px 0px 10px;
+    border: 3px solid rgb(206, 83, 77);
+    gap: 10px;
+}
+
+
+.left {
+    grid-area: left;
+}
+
+.left .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+        "carrousel"
+        "fauna";
+    gap: 10px;
+}
+
+.carrousel {
+    grid-area: carrousel;
+    background: url("../img/carousel/moutains_home.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: .6s;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.carrousel .botones {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.carrousel .atras {
+    left: 0px;
+}
+
+.carrousel .adelante {
+    right: 0px;
+}
+
+.carrousel .botones i {
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: .6s;
+}
+
+.carrousel .botones:hover {
+    color: white;
+    background: rgb(0, 0, 0, .3);
+    transition: .6s;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* 
+.carrousel #imagen{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+} */
+
+.fauna {
+    grid-area: fauna;
+    background: rgb(255, 255, 255);
+}
+
+.fauna .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "one two";
+    gap: 10px;
+}
+
+.fauna .container .grid-small {
+    grid-area: one;
+    background: white;
+    height: 100%;
+}
+
+.fauna .container .grid-small .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "faunaone faunatwo"
+        "faunathree faunafour";
+    gap: 10px;
+}
+
+.fauna .container .grid-small .container .one {
+    grid-area: faunaone;
+    height: 100%;
+    width: 100%;
+    background: url("../img/blog/lapacho-amarillo.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: contrast(120%);
+}
+
+.fauna .container .grid-small .container .two {
+    grid-area: faunatwo;
+    height: 100%;
+    width: 100%;
+    background: url("../img/blog/tucan.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: contrast(120%);
+}
+
+.fauna .container .grid-small .container .three {
+    grid-area: faunathree;
+    height: 100%;
+    width: 100%;
+    background: url("../img/blog/cardenal-rojo.jpg");
+    background-size: cover;
+    filter: contrast(120%);
+}
+
+.fauna .container .grid-small .container .four {
+    grid-area: faunafour;
+    height: 100%;
+    width: 100%;
+    background: url("../img/blog/pareja-periquitos.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: contrast(120%);
+}
+
+.fauna .container .grid-medium {
+    grid-area: two;
+    background: url("../img/blog/periquito.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    filter: contrast(120%);
+}
+
+.right {
+    grid-area: right;
+}
+
+.right .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "danza fauna";
+    gap: 10px;
+}
+
+.danza {
+    grid-area: danza;
+    background: url("../img/blog/danza2.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: contrast(120%);
+}
+
+.danza .hover {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.3);
+    opacity: 0;
+    display: flex;
+    transition: .6s;
+}
+
+.danza .hover:hover {
+    opacity: 1;
+    transition: .6s;
+}
+
+.danza .hover:hover a {
+    margin: auto auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.danza .hover:hover a i {
+    font-size: 50px;
+    color: white;
+}
+
+.turismo {
+    grid-area: fauna;
+    background: white;
+}
+
+.turismo .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+        "one"
+        "two"
+        "three";
+    gap: 10px;
+}
+
+.turismo .container .one {
+    grid-area: one;
+    background: url('../img/blog/terrasa-eco-hotel.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.turismo .container .two {
+    grid-area: two;
+    background: url('../img/blog/eco-hotel-gota-del-chaco.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.turismo .container .three {
+    grid-area: three;
+    background: url('../img/blog/bar-eco-hotel.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .general-info {
+        padding: 10px;
+    }
+
+    .image {
+        height: 200px;
+        margin: 10px 0px 10px 0px;
+        width: 100%;
+        max-width: none;
+        display: block;
+    }
+
+    .body {
+        padding: 10px;
+    }
+
+    .gallery {
+        margin: 50px 0px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "left"
+            "right";
+        width: 100%;
+        max-width: 600px;
+        height: 1000px;
+        padding: 10px;
+        border: 3px solid rgb(206, 83, 77);
+        gap: 10px;
+    }
+
+    .left {
+        grid-area: left;
+    }
+
+    .right {
+        grid-area: right;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .general-info {
+        padding: 10px;
+    }
+
+    .image {
+        height: 200px;
+        margin: 10px auto;
+        width: 80%;
+        max-width: none;
+        display: block;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .general-info {
+        padding: 10px;
+    }
+
+    .image {
+        height: 200px;
+        margin: 10px 0px 10px 0px;
+        width: 100%;
+        max-width: none;
+        display: block;
+    }
+}
